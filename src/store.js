@@ -28,4 +28,9 @@ const reducer = (state = { count: 0 }, action) => {
 
 const store = createStore(reducer);
 
+export const actionCreators = {
+  incrementCount,
+  decrementCount,
+};
+
 export default store;
