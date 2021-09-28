@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { connect } from 'react-redux';
 
-function Counter() {
+function Counter({ state }) {
+  console.log(state);
   const [count, setCount] = useState(0);
 
   return (
@@ -13,4 +15,8 @@ function Counter() {
   );
 }
 
-export default Counter;
+function mapStateToProps(state) {
+  return { state };
+}
+
+export default connect(mapStateToProps)(Counter);
