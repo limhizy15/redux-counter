@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import { connect } from 'react-redux';
-import { actionCreators } from '../store';
 
 function Counter(props) {
   return (
