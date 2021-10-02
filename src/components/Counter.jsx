@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 
 function Counter(props) {
   return (
@@ -8,11 +8,11 @@ function Counter(props) {
       <span>{props.count}</span>
       <button onClick={() => props.dispatch({ type: 'INCREMENT' })}>+</button>
     </div>
-  );
+  )
 }
 
 function mapStateToProps(state) {
-  return { count: state.count };
+  return { count: state }
 }
 
-export default connect(mapStateToProps)(Counter);
+export default connect(mapStateToProps)(Counter)

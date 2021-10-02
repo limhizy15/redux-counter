@@ -1,19 +1,34 @@
-import { createStore } from 'redux';
+import { createStore } from 'redux'
 
-const INCREMENT = 'INCREMENT';
-const DECREMENT = 'DECREMENT';
+const INCREMENT = 'INCREMENT'
+const DECREMENT = 'DECREMENT'
 
-const reducer = (state = { count: 0 }, action) => {
+// ACTION
+const increment = () => {
+  return {
+    type: INCREMENT,
+  }
+}
+
+const decrement = () => {
+  return {
+    type: DECREMENT,
+  }
+}
+
+// Reducer
+const reducer = (state = 0, action) => {
   switch (action.type) {
     case INCREMENT:
-      return { ...state, count: state.count + 1 };
+      return state + 1
     case DECREMENT:
-      return { ...state, count: state.count - 1 };
+      return state - 1
     default:
-      return state;
+      return state
   }
-};
+}
 
-const store = createStore(reducer);
+// STORE
+const store = createStore(reducer)
 
-export default store;
+export default store
